@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "design-hub": {
+      "command": "designhub",
+      "args": [
+        "mcp",
+        "--stdio"
+      ]
+    }
+  }
+}

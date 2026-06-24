@@ -4,21 +4,17 @@ Official Codex plugins from Reimaginate.
 
 ## Available Plugins
 
-- DesignHub
-- DataHub
-- Orchestrator
+- Design Hub
 
 ## Installation
 
-designhub codex install
+Install the Design Hub CLI, then run:
 
-or
+```powershell
+designhub mcp install codex
+```
 
-Follow the installation instructions in the Codex Plugin Directory.
-
-## Documentation
-
-Links to each plugin.
+The installer registers this GitHub-hosted marketplace and installs `design-hub@reimaginate`.
 
 ## Support
 

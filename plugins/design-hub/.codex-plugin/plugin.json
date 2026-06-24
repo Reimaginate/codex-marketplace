@@ -1,0 +1,37 @@
+{
+  "name": "design-hub",
+  "version": "0.1.0+codex.20260624094032",
+  "description": "Design Hub integration for Codex with confirmed read and write access.",
+  "author": {
+    "name": "Reimaginate",
+    "url": "https://designhub.reimaginate.online"
+  },
+  "homepage": "https://designhub.reimaginate.online",
+  "repository": "https://github.com/Reimaginate/codex-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "design-hub",
+    "codex",
+    "mcp",
+    "documentation"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Design Hub",
+    "shortDescription": "Read and update Design Hub workspaces, pages and specs from Codex.",
+    "longDescription": "Provides Codex access to Design Hub workspaces, views, table of contents, pages, search, confirmed page writes, and workspace assets through a local MCP server that reuses the existing Design Hub CLI authentication flow.",
+    "developerName": "Reimaginate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://designhub.reimaginate.online",
+    "defaultPrompt": [
+      "Find the relevant Design Hub implementation plan.",
+      "Search Design Hub for architecture notes.",
+      "Create a Design Hub page with an Orchestrator workflow."
+    ]
+  }
+}
