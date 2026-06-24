@@ -1,6 +1,6 @@
 {
   "name": "design-hub",
-  "version": "0.1.0+codex.20260624094032",
+  "version": "0.1.0+codex.20260625153000",
   "description": "Design Hub integration for Codex with confirmed read and write access.",
   "author": {
     "name": "Reimaginate",
