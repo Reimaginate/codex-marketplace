@@ -201,6 +201,16 @@ Do not change workspace settings, view settings, permissions, production configu
 
 Design Hub renders the page title from page metadata or Markdown front matter as the visible level 1 heading.
 
+### Agent Guidance Discovery
+
+Before creating or replacing substantial Design Hub page content, discover and apply relevant agent guidance.
+
+- Read the root `AGENTS.md` and the nearest scoped `AGENTS.md` files that apply to the target repository, app, workspace, or content area.
+- When `AGENTS.md` files conflict, prefer the closest applicable file over broader repository guidance.
+- Treat `_Agents_.md`, `Agents.md`, or similarly named Design Hub workspace/page guidance discovered through TOC, page search, or adjacent content as local authoring guidance.
+- Follow system, developer, and user instructions first; use repo `AGENTS.md` guidance for coding and repository conventions.
+- Use Design Hub-local agent guidance for workspace/page writing style and structure, then sample existing pages to match the final section names, ordering, tone, and formatting.
+
 ### Style Matching Workflow
 
 Before creating or replacing substantial Design Hub page content, sample the destination context so the new content matches the workspace's existing style and structure.
