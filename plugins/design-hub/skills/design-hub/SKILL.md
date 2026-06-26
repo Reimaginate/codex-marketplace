@@ -244,6 +244,7 @@ When creating or updating Markdown page content:
 - Start authored content with an introductory paragraph or a level 2 heading such as `## Purpose`, `## Audience`, or `## Scope`.
 - Use level 2 headings as the top visible section headings inside normal Design Hub pages.
 - Do not add an empty line immediately after Markdown headings. Put the following paragraph, list, table, or code fence on the next line because Design Hub heading styles already provide visual spacing.
+- Do not add a blank line immediately before Markdown bullet lists. Keep bullet lists compact by starting them directly after the introducing paragraph or heading unless a specific Design Hub rendering need requires otherwise.
 - If front matter includes `title:`, do not repeat the same title as a Markdown H1 after the front matter.
 - If updating a page that already has both a front matter title and duplicate H1, remove the duplicate H1 when it is part of the requested content cleanup or when replacing the page body. Preserve it only when the user explicitly asks for a verbatim/minimal edit.
 - Use a Markdown H1 only when the content will not have page title metadata or front matter rendered by Design Hub, or when the user explicitly requests an H1 in the body.
