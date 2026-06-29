@@ -1,5 +1,5 @@
 ---
-name: dynamics-365
+name: dynamics-365-cli
 description: Use Dynamics 365 MCP tools to inspect Dataverse metadata, records, automation assets, solutions, users, roles, permissions, and security comparisons through the local D365 MCP server. Use when Codex needs live Dynamics 365 or Dataverse environment context. Do not use for generic Dataverse documentation, public Microsoft docs, or information already supplied in the conversation.
 ---
 
@@ -28,7 +28,7 @@ If plugin-provided MCP tools are still absent, use the documented Codex MCP conf
 Ask the user to explicitly enable or define the local Dynamics 365 server in `~/.codex/config.toml`, then restart or reload Codex and start a fresh thread:
 
 ```toml
-[plugins."dynamics-365@reimaginate".mcp_servers.d365]
+[plugins."dynamics-365-cli@reimaginate".mcp_servers.d365]
 enabled = true
 
 [mcp_servers.d365]
@@ -98,3 +98,4 @@ Forbidden:
 - Do not use destructive CLI commands as a substitute for unavailable MCP tools.
 
 If a requested task requires a mutation that MCP does not expose, explain that the plugin is read-oriented and ask the user whether they want a separate CLI workflow.
+

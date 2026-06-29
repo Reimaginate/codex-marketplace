@@ -20,7 +20,7 @@
       "name": "dynamics-365-cli",
       "source": {
         "source": "local",
-        "path": "./plugins/dynamics-365"
+        "path": "./plugins/dynamics-365-cli"
       },
       "policy": {
         "installation": "AVAILABLE",
