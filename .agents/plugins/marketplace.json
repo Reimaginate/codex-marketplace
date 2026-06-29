@@ -17,7 +17,7 @@
       "category": "Productivity"
     },
     {
-      "name": "dynamics-365",
+      "name": "dynamics-365-cli",
       "source": {
         "source": "local",
         "path": "./plugins/dynamics-365"

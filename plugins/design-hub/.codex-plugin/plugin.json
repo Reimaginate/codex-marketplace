@@ -34,6 +34,9 @@
       "Read the Design Hub page before code changes.",
       "Create a Design Hub page with an Orchestrator workflow.",
       "Update this Design Hub page with a sequence diagram."
-    ]
+    ],
+    "composerIcon": "./assets/dh-logo.svg",
+    "logo": "./assets/dh-logo.svg",
+    "logoDark": "./assets/dh-logo.svg"
   }
 }

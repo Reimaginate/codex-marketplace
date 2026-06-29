@@ -1,12 +1,12 @@
 {
-  "name": "dynamics-365",
+  "name": "dynamics-365-cli",
   "version": "0.1.0",
   "description": "Dynamics 365 and Dataverse integration for Codex over the local HTTPS MCP server.",
   "author": {
     "name": "Reimaginate",
-    "url": "https://designhub.reimaginate.online"
+    "url": "https://reimaginate.online"
   },
-  "homepage": "https://designhub.reimaginate.online",
+  "homepage": "https://reimaginate.online",
   "repository": "https://github.com/Reimaginate/codex-marketplace",
   "license": "MIT",
   "keywords": [
@@ -19,7 +19,7 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Dynamics 365",
+    "displayName": "Reimaginate D365 CLI",
     "shortDescription": "Inspect Dynamics 365 and Dataverse metadata, records, automation, and security from Codex.",
     "longDescription": "Provides Codex access to Dynamics 365 and Dataverse metadata, records, automation assets, solutions, and security comparisons through the Design Hub CLI Dynamics 365 local HTTPS streamable HTTP MCP server.",
     "developerName": "Reimaginate",
@@ -27,11 +27,14 @@
     "capabilities": [
       "Read"
     ],
-    "websiteURL": "https://designhub.reimaginate.online",
+    "websiteURL": "https://reimaginate.online",
     "defaultPrompt": [
       "Describe this Dataverse table schema.",
       "Find duplicate Dataverse records.",
       "Compare two Dynamics 365 users."
-    ]
+    ],
+    "composerIcon": "./assets/dh-logo.svg",
+    "logo": "./assets/dh-logo.svg",
+    "logoDark": "./assets/dh-logo.svg"
   }
 }
