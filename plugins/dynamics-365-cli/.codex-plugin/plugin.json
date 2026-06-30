@@ -1,7 +1,7 @@
 {
   "name": "dynamics-365-cli",
   "version": "0.1.0",
-  "description": "Dynamics 365 and Dataverse integration for Codex over the local HTTPS MCP server.",
+  "description": "Dynamics 365, Dataverse, and Power Pages integration for Codex over the local HTTPS MCP server.",
   "author": {
     "name": "Reimaginate",
     "url": "https://reimaginate.online"
@@ -12,6 +12,7 @@
   "keywords": [
     "dynamics-365",
     "dataverse",
+    "power-pages",
     "d365",
     "codex",
     "mcp"
@@ -20,8 +21,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Reimaginate D365 CLI",
-    "shortDescription": "Inspect Dynamics 365 and Dataverse metadata, records, automation, and security from Codex.",
-    "longDescription": "Provides Codex access to Dynamics 365 and Dataverse metadata, records, automation assets, solutions, and security comparisons through the Design Hub CLI Dynamics 365 local HTTPS streamable HTTP MCP server.",
+    "shortDescription": "Inspect Dynamics 365, Dataverse, and Power Pages metadata, records, automation, and security from Codex.",
+    "longDescription": "Provides Codex access to Dynamics 365, Dataverse, and Power Pages metadata, records, automation assets, solutions, portal inventories, and security comparisons through the Design Hub CLI Dynamics 365 local HTTPS streamable HTTP MCP server.",
     "developerName": "Reimaginate",
     "category": "Productivity",
     "capabilities": [
@@ -30,6 +31,7 @@
     "websiteURL": "https://reimaginate.online",
     "defaultPrompt": [
       "Describe this Dataverse table schema.",
+      "Export a Power Pages portal inventory.",
       "Find duplicate Dataverse records.",
       "Compare two Dynamics 365 users."
     ],

@@ -1,11 +1,11 @@
 ---
 name: dynamics-365-cli
-description: Use Dynamics 365 MCP tools to inspect Dataverse metadata, records, automation assets, solutions, users, roles, permissions, and security comparisons through the local D365 MCP server. Use when Codex needs live Dynamics 365 or Dataverse environment context. Do not use for generic Dataverse documentation, public Microsoft docs, or information already supplied in the conversation.
+description: Use Dynamics 365 MCP tools to inspect Dataverse metadata, records, automation assets, solutions, Power Pages portals, users, roles, permissions, and security comparisons through the local D365 MCP server. Use when Codex needs live Dynamics 365, Dataverse, or Power Pages environment context. Do not use for generic Dataverse documentation, public Microsoft docs, or information already supplied in the conversation.
 ---
 
 # Dynamics 365
 
-Use the Dynamics 365 MCP tools when the user asks about live Dynamics 365 or Dataverse metadata, records, workflows, cloud flows, solutions, plugin assemblies, views, forms, option sets, users, roles, permissions, teams, or duplicate records in a configured environment.
+Use the Dynamics 365 MCP tools when the user asks about live Dynamics 365 or Dataverse metadata, records, workflows, cloud flows, solutions, plugin assemblies, Power Pages portal implementations, views, forms, option sets, users, roles, permissions, teams, or duplicate records in a configured environment.
 
 Do not use these tools for public documentation lookups, generic Dataverse coding questions, repository-only inspection, or answers that can be completed from information already supplied in the current conversation.
 
@@ -75,6 +75,7 @@ Common MCP tools:
 - Authentication: `auth_status`.
 - Metadata: `list_entities`, `describe_entity`, `list_fields`, `list_relationships`, `list_optionsets`, `list_views`, `list_forms`.
 - Solutions and automation: `list_solutions`, `list_plugin_assemblies`, `list_entity_event_handlers`, `list_workflows`, `list_cloud_flows`, `export_workflow`, `export_cloud_flow`.
+- Power Pages: `list_portals`, `export_portal_inventory`.
 - Records: `get_record`, `query_records`, `count_records`, `find_duplicates`.
 - Security: `list_users`, `list_roles`, `list_user_roles`, `list_user_permissions`, `compare_user_roles`, `compare_user_permissions`, `compare_user_teams`.
 
@@ -85,6 +86,7 @@ The Dynamics 365 MCP integration is intended for read, query, export, and compar
 Allowed:
 
 - Inspect metadata, views, forms, option sets, solutions, plugin assemblies, workflows, and cloud flows.
+- Inspect Power Pages portal sites and export relationship-aware portal inventories.
 - Retrieve a specific record by id when needed for the task.
 - Query records with scoped FetchXML and reasonable limits.
 - Count records, compare users, and find duplicate groups.
