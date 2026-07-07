@@ -97,6 +97,17 @@ designhub login
 6. Use `get_page` before updating an existing page so you have the current content and `versionId`.
 7. Keep results scoped. Use limits and follow-up searches instead of pulling broad content.
 
+### Token-efficient reads
+
+Design Hub MCP read tools are optimized for staged discovery. Prefer compact reads first, then request content explicitly only for the pages or chunks that matter.
+
+- Use `search_pages` as a compact discovery tool by default. It returns page identity, paths, snippets, highlights, status, timestamps, and continuation state without full content unless `includeContent:true` is supplied.
+- Use `includeContent:true` on `search_pages` only when the matched content chunks are needed, and pair it with `maxContentChars` when a small excerpt is enough.
+- Use `get_page` for direct page reads. When only safe-write metadata is needed, pass `includeContent:false` and use the returned `versionId` and `draftVersionId`.
+- Use `get_active_draft` for draft context. When only draft concurrency metadata is needed, pass `includeContent:false` and use the returned `baseVersionId` and `draftRevision`.
+- Use `maxContentChars` on page, draft, and search reads when large pages are possible. Treat truncation warnings as a signal to narrow the request or make a deliberate full-content read.
+- In MCP protocol responses, `structuredContent` is the canonical machine-readable payload. The text content is intentionally terse and should not be treated as the full result.
+
 Common MCP tools:
 
 - Workspace discovery: `list_workspaces`, `list_views`, `get_toc`.
