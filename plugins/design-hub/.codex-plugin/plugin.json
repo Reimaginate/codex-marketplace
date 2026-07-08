@@ -1,6 +1,6 @@
 {
   "name": "design-hub",
-  "version": "0.1.0+codex.20260707090000",
+  "version": "0.1.0+codex.20260708023436",
   "description": "Design Hub integration for Codex with confirmed read and write access over the local HTTPS MCP server.",
   "author": {
     "name": "Reimaginate",

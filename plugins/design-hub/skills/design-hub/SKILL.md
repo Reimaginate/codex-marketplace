@@ -56,7 +56,7 @@ The repository plugin configuration already uses this transport shape in `apps/d
 The local MCP server can be started with access restrictions. Treat these as hard server-side policy boundaries, not just preferences.
 
 - In `--access read-only`, use only the read tools exposed by `tools/list`; writes are rejected by the server.
-- In `--access edit`, create and update tools are available, but destructive tools such as `remove_toc_item`, `discard_draft`, and `update_page` with `allowDiscardDraft:true` are rejected.
+- In `--access edit`, create and update tools are available, including `rename_toc_item`; destructive tools such as `remove_toc_item`, `discard_draft`, and `update_page` with `allowDiscardDraft:true` are rejected.
 - In `--access unrestricted`, all exposed Design Hub MCP tools are available, subject to normal Design Hub API authorization.
 - When `--workspace-id` is set, do not call `list_workspaces`; use the configured workspace id and only call workspace-scoped tools for that workspace.
 - When `--tenant-id` is set, omit `tenantId` or use the configured tenant id. Do not supply a different tenant id.
@@ -114,7 +114,7 @@ Common MCP tools:
 - Page discovery and content: `list_pages`, `get_page`, `search_pages`.
 - Page writes: `create_page`, `update_page`.
 - Draft writes: `get_active_draft`, `save_draft`, `publish_draft`, `discard_draft`.
-- TOC item writes: `insert_toc_item`, `remove_toc_item`.
+- TOC item writes: `insert_toc_item`, `rename_toc_item`, `remove_toc_item`.
 - Workspace assets: `list_workspace_assets`, `download_workspace_asset`, `upload_workspace_asset`.
 
 ## TOC Identity
@@ -158,6 +158,14 @@ When the user asks to create pages under a group:
 - Refresh or reuse the latest TOC `revision` returned after each TOC write as the next `expectedRevision`.
 - Do not place those page items at the root unless the user explicitly asks for root placement.
 
+When the user asks to rename a TOC item:
+
+- Use `rename_toc_item`, not remove-and-reinsert, for label-only changes to group or page TOC item labels.
+- First call `get_toc` for the default workspace TOC or the specified `viewId`, then call `rename_toc_item` with `confirm:true`, the current `expectedRevision`, the TOC item `id`, and the new `label`.
+- Include `viewId` only when renaming an item in a workspace view TOC; omit it for the default workspace TOC.
+- Treat rename as navigation-label-only. Do not update page title metadata, page content, children, order, linked page ids, or parent placement unless the user separately asks for those changes.
+- In read-only MCP mode, report that `rename_toc_item` is not available. In edit and unrestricted modes, use it normally when exposed by the running MCP server.
+
 ## Write Boundary
 
 The Design Hub integration can read content freely and can write through tools that require explicit confirmation.
@@ -179,6 +187,7 @@ Allowed:
 - Publish saved drafts with `publish_draft` and `confirm:true`.
 - Discard saved drafts with `discard_draft` and `confirm:true`.
 - Insert TOC items with `insert_toc_item`, `confirm:true`, and the current `expectedRevision` from `get_toc`.
+- Rename TOC items with `rename_toc_item`, `confirm:true`, and the current `expectedRevision` from `get_toc`.
 - Remove TOC items with `remove_toc_item`, `confirm:true`, and the current `expectedRevision` from `get_toc`.
 - List, download, or upload workspace assets with `list_workspace_assets`, `download_workspace_asset`, and `upload_workspace_asset`; upload requires `confirm:true`.
 
